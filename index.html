@@ -1,16 +1,31 @@
- <!DOCTYPE html>
- <html lang="en">
-   <head>
-       <meta charset="UTF-8">
-       <title>My Todo App</title>
-       <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-       <h1>Моя задача на сегодня:</h1>
-       <ul id="taskList"></ul>
-       <input type="text" id="newTaskInput" placeholder="Новая задача...">
-       <button onclick="addTask()">Добавить задачу</button>
-       <script src="script.js"></script>
-   </body>
- </html>
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мои задачи на сегодня:</h1>
+        
+        <div id="emptyMessage" class="empty-message" style="display: none;">
+            Список задач пуст. Добавьте новую задачу!
+        </div>
+        
+        <ul id="taskList"></ul>
+        
+        <div class="input-group">
+            <input type="text" id="newTaskInput" placeholder="Введите новую задачу...">
+            <button onclick="addTask()" class="add-btn">➕ Добавить</button>
+        </div>
+        
+        <div class="actions">
+            <button onclick="clearAllTasks()" class="clear-btn">🗑️ Очистить все</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
